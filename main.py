@@ -9,6 +9,7 @@ count = 0
 
 while count < length:
     st.write(dates[count])
-    st.write(+ matches[count])
+    st.write("**" + matches[count] + "**")
     st.info(results[count])
+    st.subheader("")
     count += 1
