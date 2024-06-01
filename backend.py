@@ -1,11 +1,16 @@
 import requests
 
 API_KEY = "5wF6ms2LYgiBqMG99iJvQYfA9oEonhBQtSu6pUFmcgHlDQtSNPag6haiTTCF"
-url = f"https://api.sportmonks.com/v3/football/fixtures?api_token={API_KEY}"
+URL = f"https://api.sportmonks.com/v3/football/fixtures?api_token={API_KEY}"
 
 
 def get_data():
-    response = requests.get(url)
+
+    """this function gets the data from the API_KEY & URL given above
+    and filters the data and returns the list of matches, result of those
+    matches and date of the matches"""
+
+    response = requests.get(URL)
     df = response.json()
     filtered_data = df["data"]
 
